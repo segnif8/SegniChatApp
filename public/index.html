@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chat Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="segni"><div class="container">
+        <div id="user-section" class="user-section">
+            <h1>ChatApp</h1>
+            <input id="username" placeholder="Enter your username" autocomplete="off" />
+            <button id="register-btn">Join</button></div>
+            <div id="online-users" class="online-users"></div>
+        </div>
+        <div id="chat-section" class="chat-section" style="display: none;">
+            <button id="back-btn">Back</button>
+            <h2 id="chat-with-user"></h2>
+            <div id="typing-indicator" class="typing-indicator" style="display: none;"></div>
+            <div id="messages" class="messages"></div>
+            <form id="message-form">
+                <input id="message-input" placeholder="Type a message..." autocomplete="off" />
+                <button type="submit">Send</button>
+                <input type="file" id="file-input" />
+                <button type="button" id="send-file-btn">Send File</button>
+            </form>
+        </div>
+        <div id="profile-section" class="profile-section" style="display: none;">
+            <h2>Your Profile</h2>
+            <input type="file" id="profile-pic-input" />
+            <button id="update-profile-btn">Update Profile</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

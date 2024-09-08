@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.hide {
+    display: none;
+}
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #d90429;
+}
+
+input, button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #8d99ae;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #d90429;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a3071d;
+}
+
+.online-users {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.online-users div {
+    padding: 8px;
+    border-bottom: 1px solid #ced4da;
+    color: #495057;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.online-users div:hover {
+    background-color: #e2e6ea;
+}
+
+.messages {
+    height: 300px;
+    overflow-y: auto;
+    background-color: #fafafa;
+    border: 1px solid #8d99ae;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 80%;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.message.sent {
+    background-color: #d4edda;
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    color: #d90429;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.typing-indicator {
+    font-style: italic;
+    color: #6c757d;
+    margin: 5px 0;
+}
+
+#back-btn {
+    background-color: #6c757d;
+}
+
+#back-btn:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .messages {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
